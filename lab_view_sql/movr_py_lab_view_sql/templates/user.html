@@ -1,0 +1,37 @@
+{% extends 'layouts/main.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+  {% if current_user.is_active %}
+    <div class="container">
+      <p class="text-left" style="margin-left: 40px">You are logged in as {{ current_user.email }}.</p>
+      <a class="list-group-item">
+        <div class="col-md" style="display: inline-block;">
+          <div class="container text-center">
+            <table border="1px solid black;">
+                <tr>
+                    <th>
+                        <div class="alert text-center" role="alert" style="width: 25;">Phone Number(s)</div>
+                    </th>
+                </tr>
+              {% for phone_number in current_user.phone_numbers %}
+                <tr>
+                    <th>
+                        <div class="text-center" style="width: 25rem;">{{ phone_number }}</div>
+                    </th>
+                </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+      </a>
+      <p>
+        <div class="alert alert-warning text-center" role="alert" style="width: 18rem;">
+          <form class="form form-horizontal" method="POST" style="width: 15rem;" action="/user/delete">
+            {{ wtf.form_field(remove_user_form.submit) }}
+          </form>
+        </div>
+      </p>
+    </div>
+  {% endif %}
+{% endblock %}

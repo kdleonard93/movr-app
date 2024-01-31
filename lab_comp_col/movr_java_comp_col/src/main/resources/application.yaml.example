@@ -1,0 +1,37 @@
+server:
+  port: 36257
+
+spring:
+  datasource:
+    # example urls for CockroachCloud Free
+    # url: jdbc:postgresql://HOSTNAME:PORT/CLUSTER.DATABASE?sslmode=verify-full&sslrootcert=/path/to/my/cc-ca.crt
+
+    # url: jdbc:postgresql://free-tier.gcp-us-central1.cockroachlabs.cloud:26257/cheeky-chicken-09.movr?sslmode=verify-full&sslrootcert=/Users/crl/Downloads/cc-ca.crt
+
+    # example url for CockroachCloud dedicated
+    # url: jdbc:postgresql://HOSTNAME:PORT/movr?sslmode=verify-full&sslrootcert=/path/to/my/cluster.crt
+    
+    # example url for local CockroachDB 
+    # url: jdbc:postgresql://localhost:26257/movr?ssl=true&sslmode=disable
+
+    url: TBD
+    username: TBD
+    password: TBD
+
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.CockroachDB201Dialect
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+logging:
+  level:
+    org.springframework.web: INFO
+    org.hibernate.SQL: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: INFO
+
+
+
+
+

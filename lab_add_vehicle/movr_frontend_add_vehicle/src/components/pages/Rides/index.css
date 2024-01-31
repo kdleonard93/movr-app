@@ -1,0 +1,19 @@
+.text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* css */
+
+h1{
+    font-weight: 600;
+    font-size: 40px;
+    color: #37384E;
+  }
+
+  h5{
+    font-size: 22px;
+    font-weight: 600;
+    color: #171720;
+  }

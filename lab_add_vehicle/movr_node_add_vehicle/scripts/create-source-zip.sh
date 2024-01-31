@@ -1,0 +1,1 @@
+zip -r deploy-nodejs-`date +"%Y%m%d-%H%M%S"`.zip . -x 'node_modules\/*'

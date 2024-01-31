@@ -1,0 +1,5 @@
+/* css */
+.App {
+    background: url("../../../components/images/login-bg.jpg") no-repeat top right;
+    background-size: contain;
+}

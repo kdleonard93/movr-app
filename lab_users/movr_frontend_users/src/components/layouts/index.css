@@ -1,0 +1,20 @@
+.footer{
+    background-color: black;
+    height: 100%;
+    margin:0;
+    padding: 20px;
+}
+
+
+.buttoncolor{
+    background-color: rgba(255,182,193 ,.1)
+}
+
+.buttoncolor:hover{
+    background-color: #FF3565
+}
+
+li.active {
+    /* created active class for your li elements */
+    border-bottom: 3px solid black;
+  }
